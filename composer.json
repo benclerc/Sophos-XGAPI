@@ -1,11 +1,15 @@
 {
     "name": "benclerc/sophosxg-api",
     "description": "Library used for interacting with Sophos XG firewall API.",
+    "homepage": "https://github.com/benclerc/SophosXGAPI",
+    "license": "MIT",
     "type": "Library",
     "authors": [
         {
             "name": "Benjamin Clerc",
-            "email": "contact@benjamin-clerc.com"
+            "email": contact@benjamin-clerc.com",
+            "homepage": "https://benjamin-clerc.com",
+            "role": "Creator/Developer"
         }
     ],
     "minimum-stability": "stable",
