@@ -10,6 +10,10 @@
 
 namespace Sophos;
 
+use Exception;
+use DOMDocument;
+use SimpleXMLElement;
+
 /**
 * 	Sophos XG API
 *	@property Config $config Config object with all needed information.
@@ -35,7 +39,7 @@ class XGAPI {
 	*/
 	private function curlRequest(\DOMDocument $xml) : array {
 		// Create an empty document
-		$reqxml = new \DOMDocument();
+		$reqxml = new DOMDocument();
 		// Create the "Request" entity
 		$xml_request = $reqxml->createElement('Request');
 
@@ -73,16 +77,16 @@ class XGAPI {
 
 		// Check if there is a CURL error
 		if (curl_errno($ch)) {
-		    throw new \Exception('curlRequest() called by '.debug_backtrace()[1]['function'].'() : Curl error : '.curl_error($ch));
+		    throw new Exception('curlRequest() called by '.debug_backtrace()[1]['function'].'() : Curl error : '.curl_error($ch));
 		}
 		// Close CURL
 		curl_close ($ch);
 
 		// Try to parse XML, if not parsable throw error because the firewall always answer an XML element
 		try {
-			$resXML = new \SimpleXMLElement($result);
+			$resXML = new SimpleXMLElement($result);
 		} catch (Exception $e) {
-			throw new \Exception('curlRequest() called by '.debug_backtrace()[1]['function'].'() : Request returned not parsable XML.');
+			throw new Exception('curlRequest() called by '.debug_backtrace()[1]['function'].'() : Request returned not parsable XML.');
 		}
 
 		// Transform XML answer in PHP array (not cleanest way of doing it but it works)
@@ -100,7 +104,7 @@ class XGAPI {
 	*/
 	public function get(array $entities) : array {
 		// Create an empty XML document and the "Get" element for our request
-		$xml = new \DOMDocument();
+		$xml = new DOMDocument();
 		$get = $xml->createElement('Get');
 
 		// Create request with or without filter
@@ -141,10 +145,10 @@ class XGAPI {
 			$entity = (!is_array($value)) ? $value : $key;
 
 			if (empty($res[$entity])) {
-				throw new \Exception('get() called by '.debug_backtrace()[1]['function'].'() : Request did not return the wanted entity.');
+				throw new Exception('get() called by '.debug_backtrace()[1]['function'].'() : Request did not return the wanted entity.');
 			} else {
 				if (count($res[$entity]) == 2 && !empty($res[$entity]['Status'])) {
-					throw new \Exception('get() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$entity]['Status'].'" for "'.$entity.'" entity.');
+					throw new Exception('get() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$entity]['Status'].'" for "'.$entity.'" entity.');
 				} else {
 					// This if statement check (using the position of the array element "@attributes") if there is one or several element in the response. If there is only one result, then put in an array in order to keep the same structure if there are one or more results in the response
 					if (isset($res[$entity]['@attributes'])) {
@@ -167,7 +171,7 @@ class XGAPI {
 	*/
 	public function set(array $entities) : bool {
 		// Create an empty XML document and the "Set" element for our request
-		$xml = new \DOMDocument();
+		$xml = new DOMDocument();
 		$set = $xml->createElement('Set');
 
 		// Function used to add properties to the document no matter how many levels there are
@@ -206,17 +210,17 @@ class XGAPI {
 		// Analyze result : if one of the entities does not return a correct result or does not return the wanted status then throw an error, else return true
 		foreach ($entities as $key => $value) {
 			if (empty($res[$key])) {
-				throw new \Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request did not return the wanted entity.');
+				throw new Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request did not return the wanted entity.');
 			}
 			// If there was only one record for this entity, then the status element is one level lower
 			if (count($entities[$key]) == 1) {
 				if ($res[$key]['Status'] != 'Configuration applied successfully.') {
-					throw new \Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$key]['Status'].'" for "'.$key.'" entity.');
+					throw new Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$key]['Status'].'" for "'.$key.'" entity.');
 				}
 			} else {
 				foreach ($value as $key2 => $value2) {
 					if ($res[$key][$key2]['Status'] != 'Configuration applied successfully.') {
-						throw new \Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$key][$key2]['Status'].'" for "'.$key.'" entity.');
+						throw new Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$key][$key2]['Status'].'" for "'.$key.'" entity.');
 					}
 				}
 			}
@@ -233,7 +237,7 @@ class XGAPI {
 	*/
 	public function remove(array $entities) : bool {
 		// Create an empty XML document and the "Remove" element for our request
-		$xml = new \DOMDocument();
+		$xml = new DOMDocument();
 		$set = $xml->createElement('Remove');
 
 		// Create request with all wanted entities
@@ -256,10 +260,10 @@ class XGAPI {
 		// Analyze result : if one of the entities does not return a correct result or does not return the wanted status then throw an error else, return true
 		foreach ($entities as $key => $value) {
 			if (empty($res[$key])) {
-				throw new \Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request did not return the wanted entity.');
+				throw new Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request did not return the wanted entity.');
 			} else {
 				if ($res[$key]['Status'] != 'Configuration applied successfully.') {
-					throw new \Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$key]['Status'].'" for "'.$key.'" entity.');
+					throw new Exception('set() called by '.debug_backtrace()[1]['function'].'() : Request returned "'.$res[$key]['Status'].'" for "'.$key.'" entity.');
 				}
 			}
 		}
