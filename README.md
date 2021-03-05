@@ -19,7 +19,7 @@ You can find all supported entities' names on [Sophos website](https://docs.soph
 
 ## Documentation
 
-You can find a full documentation [here](/docs/index.html).
+You can find a full documentation [here](https://benclerc.github.io/SophosXGAPI/).
 
 ### Config class
 
