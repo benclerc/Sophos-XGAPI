@@ -63,7 +63,7 @@ This method is used to retrieve data from the firewall. You must set which entit
 2. like
 3. !=
 
-Example :
+Examples :
 
 ```php
 // All IPHost
@@ -74,7 +74,7 @@ $entities = [
 		['Name', '=', 'IP_TEST']
 	]
 ];
-// All IPHost with 'TEST' in the name OR of type 'Network' 
+// All IPHost with 'IP_' in the name OR of type 'Network' 
 $entities = [
 	'IPHost'=>[
 		['Name', 'like', 'IP_'],
@@ -100,7 +100,7 @@ try {
 
 This method is used to set data on the firewall. You must set all mandatory attributes for each entities you want to add.
 
-Example :
+Examples :
 
 ```php
 // Add 1 IPv4 hosts
@@ -191,7 +191,7 @@ try {
 
 This method is used to remove data from the firewall. You must set the entities you want to delete as well as the name of the objects you want to delete, you cannot delete on anything else than the object's name.
 
-Example :
+Examples :
 
 ```php
 // Remove the IPv4 host 'IP_TEST'
