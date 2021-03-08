@@ -26,35 +26,35 @@ Search.appendIndex(
             "summary": "Getter\u0020for\u0020API\u0020autorized\u0020user\u0027s\u0020password.",
             "url": "classes/Sophos-Config.html#method_getPassword"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003AsetCurlTimeout\u0028\u0029",
-            "name": "setCurlTimeout",
+            "fqsen": "\\Sophos\\Config\u003A\u003AsetTimeout\u0028\u0029",
+            "name": "setTimeout",
             "summary": "Setter\u0020for\u0020curl\u0027s\u0020timeout\u0020in\u0020ms.",
-            "url": "classes/Sophos-Config.html#method_setCurlTimeout"
+            "url": "classes/Sophos-Config.html#method_setTimeout"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003AgetCurlTimeout\u0028\u0029",
-            "name": "getCurlTimeout",
+            "fqsen": "\\Sophos\\Config\u003A\u003AgetTimeout\u0028\u0029",
+            "name": "getTimeout",
             "summary": "Getter\u0020for\u0020curl\u0027s\u0020timeout\u0020in\u0020ms.",
-            "url": "classes/Sophos-Config.html#method_getCurlTimeout"
+            "url": "classes/Sophos-Config.html#method_getTimeout"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003AsetCurlSSLVerifyPeer\u0028\u0029",
-            "name": "setCurlSSLVerifyPeer",
+            "fqsen": "\\Sophos\\Config\u003A\u003AsetSSLVerifyPeer\u0028\u0029",
+            "name": "setSSLVerifyPeer",
             "summary": "Setter\u0020for\u0020curl\u0027s\u0020option\u0020to\u0020verify\u0020SSL\u0020peer.",
-            "url": "classes/Sophos-Config.html#method_setCurlSSLVerifyPeer"
+            "url": "classes/Sophos-Config.html#method_setSSLVerifyPeer"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003AgetCurlSSLVerifyPeer\u0028\u0029",
-            "name": "getCurlSSLVerifyPeer",
+            "fqsen": "\\Sophos\\Config\u003A\u003AgetSSLVerifyPeer\u0028\u0029",
+            "name": "getSSLVerifyPeer",
             "summary": "Getter\u0020for\u0020curl\u0027s\u0020option\u0020to\u0020verify\u0020SSL\u0020peer.",
-            "url": "classes/Sophos-Config.html#method_getCurlSSLVerifyPeer"
+            "url": "classes/Sophos-Config.html#method_getSSLVerifyPeer"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003AsetCurlSSLVerifyHost\u0028\u0029",
-            "name": "setCurlSSLVerifyHost",
+            "fqsen": "\\Sophos\\Config\u003A\u003AsetSSLVerifyHost\u0028\u0029",
+            "name": "setSSLVerifyHost",
             "summary": "Setter\u0020for\u0020curl\u0027s\u0020option\u0020to\u0020verify\u0020SSL\u0020peer.",
-            "url": "classes/Sophos-Config.html#method_setCurlSSLVerifyHost"
+            "url": "classes/Sophos-Config.html#method_setSSLVerifyHost"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003AgetCurlSSLVerifyHost\u0028\u0029",
-            "name": "getCurlSSLVerifyHost",
+            "fqsen": "\\Sophos\\Config\u003A\u003AgetSSLVerifyHost\u0028\u0029",
+            "name": "getSSLVerifyHost",
             "summary": "Getter\u0020for\u0020curl\u0027s\u0020option\u0020to\u0020verify\u0020SSL\u0020peer.",
-            "url": "classes/Sophos-Config.html#method_getCurlSSLVerifyHost"
+            "url": "classes/Sophos-Config.html#method_getSSLVerifyHost"
         },                {
             "fqsen": "\\Sophos\\Config\u003A\u003A\u0024hostname",
             "name": "hostname",
@@ -71,20 +71,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Sophos-Config.html#property_password"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003A\u0024curlTimeout",
-            "name": "curlTimeout",
+            "fqsen": "\\Sophos\\Config\u003A\u003A\u0024timeout",
+            "name": "timeout",
             "summary": "",
-            "url": "classes/Sophos-Config.html#property_curlTimeout"
+            "url": "classes/Sophos-Config.html#property_timeout"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003A\u0024curlSSLVerifyPeer",
-            "name": "curlSSLVerifyPeer",
+            "fqsen": "\\Sophos\\Config\u003A\u003A\u0024SSLVerifyPeer",
+            "name": "SSLVerifyPeer",
             "summary": "",
-            "url": "classes/Sophos-Config.html#property_curlSSLVerifyPeer"
+            "url": "classes/Sophos-Config.html#property_SSLVerifyPeer"
         },                {
-            "fqsen": "\\Sophos\\Config\u003A\u003A\u0024curlSSLVerifyHost",
-            "name": "curlSSLVerifyHost",
+            "fqsen": "\\Sophos\\Config\u003A\u003A\u0024SSLVerifyHost",
+            "name": "SSLVerifyHost",
             "summary": "",
-            "url": "classes/Sophos-Config.html#property_curlSSLVerifyHost"
+            "url": "classes/Sophos-Config.html#property_SSLVerifyHost"
         },                {
             "fqsen": "\\Sophos\\XGAPI",
             "name": "XGAPI",
