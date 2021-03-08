@@ -17,9 +17,9 @@ class Config {
 	private string $hostname;
 	private string $username;
 	private string $password;
-	private int $curlTimeout = 10000;
-	private bool $curlSSLVerifyPeer = TRUE;
-	private bool $curlSSLVerifyHost = TRUE;
+	private int $timeout = 10000;
+	private bool $SSLVerifyPeer = TRUE;
+	private bool $SSLVerifyHost = TRUE;
 
 
 	/**
@@ -73,8 +73,8 @@ class Config {
 	*	@param int $timeout Curl's timeout in ms.
 	*	@return Config Config object to be passed on a new instance of XGAPI object.
 	*/
-	public function setCurlTimeout(int $timeout) {
-		$this->curlTimeout = $timeout;
+	public function setTimeout(int $timeout) {
+		$this->timeout = $timeout;
 		return $this;
 	}
 
@@ -83,8 +83,8 @@ class Config {
 	*	Getter for curl's timeout in ms.
 	*	@return int Curl's timeout in ms.
 	*/
-	public function getCurlTimeout() {
-		return $this->curlTimeout;
+	public function getTimeout() {
+		return $this->timeout;
 	}
 
 
@@ -93,8 +93,8 @@ class Config {
 	*	@param int $verifySSLPeer Curl's option to verify SSL peer.
 	*	@return Config Config object to be passed on a new instance of XGAPI object.
 	*/
-	public function setCurlSSLVerifyPeer(bool $verifySSLPeer) {
-		$this->curlSSLVerifyPeer = $verifySSLPeer;
+	public function setSSLVerifyPeer(bool $verifySSLPeer) {
+		$this->SSLVerifyPeer = $verifySSLPeer;
 		return $this;
 	}
 
@@ -103,8 +103,8 @@ class Config {
 	*	Getter for curl's option to verify SSL peer.
 	*	@return bool Curl's option to verify SSL peer.
 	*/
-	public function getCurlSSLVerifyPeer() {
-		return $this->curlSSLVerifyPeer;
+	public function getSSLVerifyPeer() {
+		return $this->SSLVerifyPeer;
 	}
 
 
@@ -113,8 +113,8 @@ class Config {
 	*	@param bool $verifySSLHost Curl's option to verify SSL host.
 	*	@return Config Config object to be passed on a new instance of XGAPI object.
 	*/
-	public function setCurlSSLVerifyHost(bool $verifySSLHost) {
-		$this->curlSSLVerifyHost = $verifySSLHost;
+	public function setSSLVerifyHost(bool $verifySSLHost) {
+		$this->SSLVerifyHost = $verifySSLHost;
 		return $this;
 	}
 
@@ -123,8 +123,8 @@ class Config {
 	*	Getter for curl's option to verify SSL peer.
 	*	@return bool Curl's option to verify SSL host.
 	*/
-	public function getCurlSSLVerifyHost() {
-		return $this->curlSSLVerifyHost;
+	public function getSSLVerifyHost() {
+		return $this->SSLVerifyHost;
 	}
 
 }
