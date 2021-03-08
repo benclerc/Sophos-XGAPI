@@ -22,7 +22,7 @@ You can find all supported entities' names on [Sophos website](https://docs.soph
 
 ## Getting started
 
-1. Get [Composer](http://getcomposer.org/)
+1. Get [Composer](http://getcomposer.org/).
 2. Install the library using composer `composer require benclerc/sophosxg-api`.
 3. Add the following to your application's main PHP file `require 'vendor/autoload.php';`.
 4. Instanciate the Config class with the firewall's hostname, username and password `$configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');`.
@@ -43,9 +43,9 @@ This Config class is used to prepare the mandatory configuration information to 
 
 Optional parameters :
 
-* CURL timeout : 10000ms. Use `setCurlTimeout()` to change.
-* CURL SSL verify peer option : TRUE. Use `setCurlSSLVerifyPeer()` to change.
-* CURL SSL verify host option : TRUE. Use `setCurlSSLVerifyHost()` to change.
+* CURL timeout : 10000ms. Use `setTimeout()` to change.
+* CURL SSL verify peer option : TRUE. Use `setSSLVerifyPeer()` to change.
+* CURL SSL verify host option : 2. Use `setSSLVerifyHost()` to change.
 
 Example :
 
@@ -55,11 +55,11 @@ $configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');
 
 // Configuration for very slow firewalls/long requests
 $configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');
-$configFirewall->setCurlTimeout(20000);
+$configFirewall->setTimeout(20000);
 
 // Unsecure configuration
 $configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');
-$configFirewall->setCurlSSLVerifyPeer(FALSE)->setCurlSSLVerifyHost(FALSE);
+$configFirewall->setSSLVerifyPeer(FALSE)->setSSLVerifyHost(FALSE);
 
 $firewall = new \Sophos\APIXG($configFirewall);
 ```
