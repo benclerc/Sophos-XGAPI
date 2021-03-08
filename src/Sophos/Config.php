@@ -10,6 +10,8 @@
 
 namespace Sophos;
 
+use Exception;
+
 /**
 * 	XGAPI's configuration class
 */
@@ -19,7 +21,7 @@ class Config {
 	private string $password;
 	private int $timeout = 10000;
 	private bool $SSLVerifyPeer = TRUE;
-	private bool $SSLVerifyHost = TRUE;
+	private int $SSLVerifyHost = 2;
 
 
 	/**
@@ -114,7 +116,7 @@ class Config {
 	*	@return Config Config object to be passed on a new instance of XGAPI object.
 	*/
 	public function setSSLVerifyHost(bool $verifySSLHost) {
-		$this->SSLVerifyHost = $verifySSLHost;
+		$this->SSLVerifyHost = ($verifySSLHost) ? 2 : 0;
 		return $this;
 	}
 
