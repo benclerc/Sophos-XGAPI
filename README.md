@@ -22,7 +22,7 @@ You can find all supported entities' names on [Sophos website](https://docs.soph
 
 ## Getting started
 
-1. Get [Composer](http://getcomposer.org/)
+1. Get [Composer](http://getcomposer.org/).
 2. Install the library using composer `composer require benclerc/sophosxg-api`.
 3. Add the following to your application's main PHP file `require 'vendor/autoload.php';`.
 4. Instanciate the Config class with the firewall's hostname, username and password `$configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');`.
