@@ -45,7 +45,7 @@ Optional parameters :
 
 * CURL timeout : 10000ms. Use `setTimeout()` to change.
 * CURL SSL verify peer option : TRUE. Use `setSSLVerifyPeer()` to change.
-* CURL SSL verify host option : TRUE. Use `setSSLVerifyHost()` to change.
+* CURL SSL verify host option : 2. Use `setSSLVerifyHost()` to change.
 
 Example :
 
