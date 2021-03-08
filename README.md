@@ -8,6 +8,18 @@ Sophos XG API is a PHP library for requesting Sophos XG firewalls. This library 
 
 You can find all supported entities' names on [Sophos website](https://docs.sophos.com/nsg/sophos-firewall/18.0/API/index.html).
 
+## Table of contents
+
+<!--ts-->
+   * [Getting started](#getting-started)
+   * [Documentation](#documentation)
+      * [Config class](#config-class)
+      * [XGAPI class](#xgapi-class)
+         * [get()](#get)
+         * [set()](#set)
+         * [remove()](#remove)
+<!--te-->
+
 ## Getting started
 
 1. Get [Composer](http://getcomposer.org/)
@@ -55,7 +67,7 @@ $firewall = new \Sophos\APIXG($configFirewall);
 
 ### XGAPI class
 
-#### get(array $entities) : array
+#### get()
 
 This method is used to retrieve data from the firewall. You must set which entity/entities you want to retrieve and you can set a filter for each one. Be careful, if you set several filters for the same entity they add up like a 'OR' not an 'AND'. Be careful not all attributes are filterable, see Sophos documentation. Available criterias for filtering :
 
@@ -96,7 +108,7 @@ try {
 }
 ```
 
-#### set(array $entities) : bool
+#### set()
 
 This method is used to set data on the firewall. You must set all mandatory attributes for each entities you want to add.
 
@@ -187,7 +199,7 @@ try {
 }
 ```
 
-#### remove(array $entities) : bool
+#### remove()
 
 This method is used to remove data from the firewall. You must set the entities you want to delete as well as the name of the objects you want to delete, you cannot delete on anything else than the object's name.
 
