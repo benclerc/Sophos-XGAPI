@@ -68,9 +68,9 @@ class XGAPI {
 		// Set CURL options (URL, do not check SSL, return response in variable and quite long timeout cause firewall's might take long time to answer)
 		curl_setopt($ch, CURLOPT_URL, 'https://'.$this->config->getHostname().':4444/webconsole/APIController?reqxml='.$strxml);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->config->getCurlSSLVerifyPeer());
-		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->config->getCurlSSLVerifyHost());
-		curl_setopt($ch, CURLOPT_TIMEOUT_MS, $this->config->getCurlTimeout());
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $this->config->getSSLVerifyPeer());
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, $this->config->getSSLVerifyHost());
+		curl_setopt($ch, CURLOPT_TIMEOUT_MS, $this->config->getTimeout());
 
 		// Execute CURL
 		$result = curl_exec($ch);
