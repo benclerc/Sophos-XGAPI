@@ -1,7 +1,7 @@
 {
-    "name": "benclerc/sophosxg-api",
+    "name": "benclerc/sophos-xgapi",
     "description": "Library used for interacting with Sophos XG firewall API.",
-    "homepage": "https://github.com/benclerc/SophosXGAPI",
+    "homepage": "https://github.com/benclerc/Sophos-XGAPI",
     "license": "MIT",
     "type": "Library",
     "authors": [
