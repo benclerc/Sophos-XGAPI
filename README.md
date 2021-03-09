@@ -1,6 +1,6 @@
-# Sophos XG API
+# Sophos XGAPI
 
-Sophos XG API is a PHP library for requesting Sophos XG firewalls. This library can :
+Sophos XGAPI is a PHP library for requesting Sophos XG firewalls. This library can :
 
 * Retrieve data from the firewall
 * Set data on the firewall
@@ -31,7 +31,7 @@ You can find all supported entities' names on [Sophos website](https://docs.soph
 
 ## Documentation
 
-You can find a full documentation [here](https://benclerc.github.io/SophosXGAPI/).
+You can find a full documentation [here](https://benclerc.github.io/Sophos-XGAPI/).
 
 ### Config class
 
