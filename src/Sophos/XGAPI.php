@@ -5,7 +5,7 @@
 *	@author Benjamin Clerc <contact@benjamin-clerc.com>
 *	@copyright Copyright (c) 2021, Benjamin Clerc.
 *	@license MIT
-*	@link https://github.com/benclerc/SophosXGAPI
+*	@link https://github.com/benclerc/Sophos-XGAPI
 */
 
 namespace Sophos;
