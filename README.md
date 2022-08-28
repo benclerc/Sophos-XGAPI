@@ -23,10 +23,10 @@ You can find all supported entities' names on [Sophos website](https://docs.soph
 ## Getting started
 
 1. Get [Composer](http://getcomposer.org/).
-2. Install the library using composer `composer require benclerc/sophosxg-api`.
+2. Install the library using composer `composer require benclerc/sophos-xgapi`.
 3. Add the following to your application's main PHP file `require 'vendor/autoload.php';`.
 4. Instanciate the Config class with the firewall's hostname, username and password `$configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');`.
-5. Use the Config object previously created to instanciate the XGAPI object `$firewall = new \Sophos\APIXG($configFirewall);`.
+5. Use the Config object previously created to instanciate the XGAPI object `$firewall = new \Sophos\XGAPI($configFirewall);`.
 6. Start using the library `$hosts = $firewall->get(['IPHost']);`.
 
 ## Documentation
@@ -61,7 +61,7 @@ $configFirewall->setTimeout(20000);
 $configFirewall = new \Sophos\Config('123.123.123.123', 'admin', 'password');
 $configFirewall->setSSLVerifyPeer(FALSE)->setSSLVerifyHost(FALSE);
 
-$firewall = new \Sophos\APIXG($configFirewall);
+$firewall = new \Sophos\XGAPI($configFirewall);
 ```
 
 
